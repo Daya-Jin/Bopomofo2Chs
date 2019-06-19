@@ -39,6 +39,16 @@ Bopomofo2Chs/
 
 ```pre.py```: 对原始数据的预处理；
 
+## requirements
+
+```
+xpinyin==0.5.6
+tensorflow==1.9.0
+Distance==0.1.3
+numpy==1.15.2
+regex==2019.06.08
+```
+
 ## 使用说明
 
 下载数据把所需的txt文件放到对应位置，运行```pre.py```，然后运行```train&eval.py```即可，程序会在```.eval/```下生成评估结果文件```eval_res.csv```。
