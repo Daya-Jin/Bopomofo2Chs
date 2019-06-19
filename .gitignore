@@ -3,3 +3,5 @@ data/*.txt
 data/*.pkl
 eval/*.csv
 eval/eval_clean.txt
+__pycache__
+.ipynb_checkpoints
