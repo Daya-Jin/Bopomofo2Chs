@@ -4,4 +4,7 @@ data/*.pkl
 eval/*.csv
 eval/eval_clean.txt
 __pycache__
+.gitattributes
+.gitignore
 .ipynb_checkpoints
+.idea
