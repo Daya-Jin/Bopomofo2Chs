@@ -43,6 +43,14 @@ Bopomofo2Chs/
 
 下载数据把所需的txt文件放到对应位置，运行```pre.py```，然后运行```train&eval.py```即可，程序会在```.eval/```下生成评估结果文件```eval_res.csv```。
 
+## 评估
+
+该任务选用编辑距离作为评估标准，归一化后的编辑距离是字符错误率(CER)，部分的评估结果如下图所示：
+
+![](img/2019-06-19_17-01-20.bmp)
+
+跑了$1$个epoch后的总CER为：$0.05$。
+
 ---
 
 References: [Tacotron](https://arxiv.org/abs/1703.10135)
