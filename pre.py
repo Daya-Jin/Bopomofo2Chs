@@ -18,8 +18,8 @@ def clean(text):
 
 def zip_spell_chs(chs, spell_transformer):
     '''
-    将汉语句子转成(拼音, 汉字)的元组，并使用'_'对其
-    :param chs: 汉语句子
+    将汉语句子转成(拼音, 汉字)的元组，并使用'_'对齐
+    :param chs: 单个汉语句子
     :param spell_transformer: 拼音转换器
     :return: (拼音, 汉字)的元组
     '''
@@ -93,6 +93,7 @@ def build_vocab():
 
 
 if __name__ == '__main__':
+    # 训练集的处理
     print('preprocessing...')
     file_I = 'data/zho_news_2007-2009_1M-sentences.txt'
     file_O = 'data/data_clean.txt'
@@ -100,3 +101,9 @@ if __name__ == '__main__':
 
     print('buliding table...')
     build_vocab()  # 构建映射表
+
+    # 测试集的处理
+    print('preprocessing...')
+    file_I = 'eval/eval.txt'
+    file_O = 'eval/eval_clean.txt'
+    preprocess(file_I, file_O, Pinyin())  # 对源文件做预处理
