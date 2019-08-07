@@ -167,6 +167,7 @@ def fused_batch_norm(inputs, training=True, act_f=None):
     :return:
     '''
     # 把维度扩展成4维，然后使用更快的fusedBN
+    # ref: https://www.quora.com/Whats-the-difference-between-batch-normalization-and-fused-batch-norm-in-TensorFlow
     shape_I = inputs.get_shape()
     rank_I = shape_I.ndims
 
